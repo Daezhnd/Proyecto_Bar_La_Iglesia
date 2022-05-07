@@ -33,13 +33,18 @@ namespace Proyecto_Bar_La_Iglesia
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.bt_Inicio = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mercanciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.personalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mn_Consulta_Personal = new System.Windows.Forms.ToolStripMenuItem();
+            this.mercanciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aregarPersonalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaMercanciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarMercanciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cajeroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -67,6 +72,7 @@ namespace Proyecto_Bar_La_Iglesia
             // 
             this.textBox1.Location = new System.Drawing.Point(87, 3);
             this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "Nombre de Usuario";
             this.textBox1.Size = new System.Drawing.Size(249, 23);
             this.textBox1.TabIndex = 2;
             // 
@@ -82,13 +88,6 @@ namespace Proyecto_Bar_La_Iglesia
             this.panel1.Size = new System.Drawing.Size(339, 94);
             this.panel1.TabIndex = 3;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(87, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 23);
-            this.textBox2.TabIndex = 3;
-            // 
             // bt_Inicio
             // 
             this.bt_Inicio.Location = new System.Drawing.Point(276, 61);
@@ -98,10 +97,18 @@ namespace Proyecto_Bar_La_Iglesia
             this.bt_Inicio.Text = "Inicio";
             this.bt_Inicio.UseVisualStyleBackColor = true;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(87, 32);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PlaceholderText = "Contraseña";
+            this.textBox2.Size = new System.Drawing.Size(252, 23);
+            this.textBox2.TabIndex = 3;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.menuStrip1);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(12, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(776, 28);
             this.panel2.TabIndex = 4;
@@ -110,44 +117,85 @@ namespace Proyecto_Bar_La_Iglesia
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.personalToolStripMenuItem,
-            this.mercanciaToolStripMenuItem});
+            this.mercanciaToolStripMenuItem,
+            this.cajeroToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(776, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // mercanciaToolStripMenuItem
-            // 
-            this.mercanciaToolStripMenuItem.Name = "mercanciaToolStripMenuItem";
-            this.mercanciaToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.mercanciaToolStripMenuItem.Text = "Mercancia";
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip2.TabIndex = 5;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
             // personalToolStripMenuItem
             // 
+            this.personalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mn_Consulta_Personal,
+            this.aregarPersonalToolStripMenuItem});
             this.personalToolStripMenuItem.Name = "personalToolStripMenuItem";
             this.personalToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.personalToolStripMenuItem.Text = "Personal";
             // 
-            // Form1
+            // mn_Consulta_Personal
+            // 
+            this.mn_Consulta_Personal.Name = "mn_Consulta_Personal";
+            this.mn_Consulta_Personal.Size = new System.Drawing.Size(180, 22);
+            this.mn_Consulta_Personal.Text = "Consulta Personal";
+            this.mn_Consulta_Personal.Click += new System.EventHandler(this.mn_Consulta_Personal_Click);
+            // 
+            // mercanciaToolStripMenuItem
+            // 
+            this.mercanciaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaMercanciaToolStripMenuItem,
+            this.agregarMercanciaToolStripMenuItem});
+            this.mercanciaToolStripMenuItem.Name = "mercanciaToolStripMenuItem";
+            this.mercanciaToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.mercanciaToolStripMenuItem.Text = "Mercancia";
+            // 
+            // cajeroToolStripMenuItem
+            // 
+            this.cajeroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cajeroToolStripMenuItem1});
+            this.cajeroToolStripMenuItem.Name = "cajeroToolStripMenuItem";
+            this.cajeroToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.cajeroToolStripMenuItem.Text = "Cajero";
+            // 
+            // aregarPersonalToolStripMenuItem
+            // 
+            this.aregarPersonalToolStripMenuItem.Name = "aregarPersonalToolStripMenuItem";
+            this.aregarPersonalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aregarPersonalToolStripMenuItem.Text = "Aregar Personal";
+            this.aregarPersonalToolStripMenuItem.Click += new System.EventHandler(this.aregarPersonalToolStripMenuItem_Click);
+            // 
+            // consultaMercanciaToolStripMenuItem
+            // 
+            this.consultaMercanciaToolStripMenuItem.Name = "consultaMercanciaToolStripMenuItem";
+            this.consultaMercanciaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaMercanciaToolStripMenuItem.Text = "Consulta Mercancia";
+            this.consultaMercanciaToolStripMenuItem.Click += new System.EventHandler(this.consultaMercanciaToolStripMenuItem_Click);
+            // 
+            // agregarMercanciaToolStripMenuItem
+            // 
+            this.agregarMercanciaToolStripMenuItem.Name = "agregarMercanciaToolStripMenuItem";
+            this.agregarMercanciaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarMercanciaToolStripMenuItem.Text = "Agregar Mercancia";
+            this.agregarMercanciaToolStripMenuItem.Click += new System.EventHandler(this.agregarMercanciaToolStripMenuItem_Click);
+            // 
+            // cajeroToolStripMenuItem1
+            // 
+            this.cajeroToolStripMenuItem1.Name = "cajeroToolStripMenuItem1";
+            this.cajeroToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.cajeroToolStripMenuItem1.Text = "Cajero";
+            this.cajeroToolStripMenuItem1.Click += new System.EventHandler(this.cajeroToolStripMenuItem1_Click);
+            // 
+            // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Inicio";
+            this.Text = "Inicio";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -155,7 +203,6 @@ namespace Proyecto_Bar_La_Iglesia
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -171,7 +218,12 @@ namespace Proyecto_Bar_La_Iglesia
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem personalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mercanciaToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem mn_Consulta_Personal;
+        private System.Windows.Forms.ToolStripMenuItem aregarPersonalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaMercanciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarMercanciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cajeroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cajeroToolStripMenuItem1;
     }
 }
 
