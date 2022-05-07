@@ -64,9 +64,9 @@ namespace Proyecto_Bar_La_Iglesia
             this.label11 = new System.Windows.Forms.Label();
             this.txt_Contraseña = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btn_Agregar = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btn_Actualizar = new System.Windows.Forms.Button();
-            this.btn_Agregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -391,6 +391,16 @@ namespace Proyecto_Bar_La_Iglesia
             this.panel12.Size = new System.Drawing.Size(70, 70);
             this.panel12.TabIndex = 3;
             // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.Location = new System.Drawing.Point(3, 3);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(64, 64);
+            this.btn_Agregar.TabIndex = 1;
+            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
+            // 
             // panel13
             // 
             this.panel13.Controls.Add(this.btn_Actualizar);
@@ -407,15 +417,7 @@ namespace Proyecto_Bar_La_Iglesia
             this.btn_Actualizar.TabIndex = 0;
             this.btn_Actualizar.Text = "Actualizar";
             this.btn_Actualizar.UseVisualStyleBackColor = true;
-            // 
-            // btn_Agregar
-            // 
-            this.btn_Agregar.Location = new System.Drawing.Point(3, 3);
-            this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(64, 64);
-            this.btn_Agregar.TabIndex = 1;
-            this.btn_Agregar.Text = "Agregar";
-            this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
             // 
             // Agregar_Personal
             // 

@@ -30,6 +30,7 @@ namespace Proyecto_Bar_La_Iglesia
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_Agregar_Existencia = new System.Windows.Forms.Button();
             this.btn_Agregar_Mercancia = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_Mercancia = new System.Windows.Forms.DataGridView();
@@ -38,8 +39,6 @@ namespace Proyecto_Bar_La_Iglesia
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Codigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Agregar_Existencia = new System.Windows.Forms.Button();
-            this.btn_Estado = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Mercancia)).BeginInit();
@@ -48,13 +47,22 @@ namespace Proyecto_Bar_La_Iglesia
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btn_Estado);
             this.panel3.Controls.Add(this.btn_Agregar_Existencia);
             this.panel3.Controls.Add(this.btn_Agregar_Mercancia);
-            this.panel3.Location = new System.Drawing.Point(10, 268);
+            this.panel3.Location = new System.Drawing.Point(10, 326);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(266, 170);
+            this.panel3.Size = new System.Drawing.Size(266, 112);
             this.panel3.TabIndex = 5;
+            // 
+            // btn_Agregar_Existencia
+            // 
+            this.btn_Agregar_Existencia.Location = new System.Drawing.Point(3, 59);
+            this.btn_Agregar_Existencia.Name = "btn_Agregar_Existencia";
+            this.btn_Agregar_Existencia.Size = new System.Drawing.Size(260, 50);
+            this.btn_Agregar_Existencia.TabIndex = 1;
+            this.btn_Agregar_Existencia.Text = "Agregar Existencia";
+            this.btn_Agregar_Existencia.UseVisualStyleBackColor = true;
+            this.btn_Agregar_Existencia.Click += new System.EventHandler(this.btn_Agregar_Existencia_Click);
             // 
             // btn_Agregar_Mercancia
             // 
@@ -82,6 +90,7 @@ namespace Proyecto_Bar_La_Iglesia
             this.dgv_Mercancia.RowTemplate.Height = 25;
             this.dgv_Mercancia.Size = new System.Drawing.Size(501, 420);
             this.dgv_Mercancia.TabIndex = 0;
+            this.dgv_Mercancia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Mercancia_CellContentClick);
             // 
             // panel1
             // 
@@ -128,25 +137,6 @@ namespace Proyecto_Bar_La_Iglesia
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre(s):";
             // 
-            // btn_Agregar_Existencia
-            // 
-            this.btn_Agregar_Existencia.Location = new System.Drawing.Point(3, 59);
-            this.btn_Agregar_Existencia.Name = "btn_Agregar_Existencia";
-            this.btn_Agregar_Existencia.Size = new System.Drawing.Size(260, 50);
-            this.btn_Agregar_Existencia.TabIndex = 1;
-            this.btn_Agregar_Existencia.Text = "Agregar Existencia";
-            this.btn_Agregar_Existencia.UseVisualStyleBackColor = true;
-            this.btn_Agregar_Existencia.Click += new System.EventHandler(this.btn_Agregar_Existencia_Click);
-            // 
-            // btn_Estado
-            // 
-            this.btn_Estado.Location = new System.Drawing.Point(3, 115);
-            this.btn_Estado.Name = "btn_Estado";
-            this.btn_Estado.Size = new System.Drawing.Size(260, 50);
-            this.btn_Estado.TabIndex = 2;
-            this.btn_Estado.Text = "Activo";
-            this.btn_Estado.UseVisualStyleBackColor = true;
-            // 
             // Consulta_Mercancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -157,6 +147,7 @@ namespace Proyecto_Bar_La_Iglesia
             this.Controls.Add(this.panel1);
             this.Name = "Consulta_Mercancia";
             this.Text = "Consulta Mercancia";
+            this.Load += new System.EventHandler(this.Consulta_Mercancia_Load);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Mercancia)).EndInit();
@@ -177,7 +168,6 @@ namespace Proyecto_Bar_La_Iglesia
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_Codigo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_Estado;
         private System.Windows.Forms.Button btn_Agregar_Existencia;
     }
 }

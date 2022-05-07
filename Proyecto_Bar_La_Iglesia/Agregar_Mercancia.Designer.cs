@@ -38,7 +38,7 @@ namespace Proyecto_Bar_La_Iglesia
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btn_Activo = new System.Windows.Forms.Button();
+            this.btn_Estado = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txt_Precio = new System.Windows.Forms.TextBox();
@@ -85,6 +85,7 @@ namespace Proyecto_Bar_La_Iglesia
             this.btn_Actualizar.TabIndex = 0;
             this.btn_Actualizar.Text = "Actualizar";
             this.btn_Actualizar.UseVisualStyleBackColor = true;
+            this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
             // 
             // panel12
             // 
@@ -102,6 +103,7 @@ namespace Proyecto_Bar_La_Iglesia
             this.btn_Agregar.TabIndex = 1;
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // panel11
             // 
@@ -133,21 +135,22 @@ namespace Proyecto_Bar_La_Iglesia
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.btn_Activo);
+            this.panel7.Controls.Add(this.btn_Estado);
             this.panel7.Controls.Add(this.label7);
             this.panel7.Location = new System.Drawing.Point(12, 204);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(334, 30);
             this.panel7.TabIndex = 10;
             // 
-            // btn_Activo
+            // btn_Estado
             // 
-            this.btn_Activo.Location = new System.Drawing.Point(80, 4);
-            this.btn_Activo.Name = "btn_Activo";
-            this.btn_Activo.Size = new System.Drawing.Size(251, 23);
-            this.btn_Activo.TabIndex = 2;
-            this.btn_Activo.Text = "Activo";
-            this.btn_Activo.UseVisualStyleBackColor = true;
+            this.btn_Estado.Location = new System.Drawing.Point(80, 4);
+            this.btn_Estado.Name = "btn_Estado";
+            this.btn_Estado.Size = new System.Drawing.Size(251, 23);
+            this.btn_Estado.TabIndex = 2;
+            this.btn_Estado.Text = "Inactivo";
+            this.btn_Estado.UseVisualStyleBackColor = true;
+            this.btn_Estado.Click += new System.EventHandler(this.btn_Estado_Click);
             // 
             // label7
             // 
@@ -381,7 +384,7 @@ namespace Proyecto_Bar_La_Iglesia
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_Codigo;
-        private System.Windows.Forms.Button btn_Activo;
+        private System.Windows.Forms.Button btn_Estado;
         private System.Windows.Forms.TextBox txt_Precio;
         private System.Windows.Forms.TextBox txt_Existencia;
         private System.Windows.Forms.TextBox txt_Proveedor;
