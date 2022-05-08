@@ -13,6 +13,7 @@ namespace Proyecto_Bar_La_Iglesia
 {
     public partial class Consulta_Mercancia : Form
     {
+        int id;//--obtiene valor codigo mercancia
         Agregar_Mercancia AgregarMercancia = new Agregar_Mercancia();
         Agregar_Existencia_Mercancia AgregarExistencia = new Agregar_Existencia_Mercancia();
         public Consulta_Mercancia()
@@ -20,7 +21,7 @@ namespace Proyecto_Bar_La_Iglesia
             InitializeComponent();
         }
         //*******
-        private void Consulta_Mercancia_Load(object sender, EventArgs e) /* muestra registro de clientes al iniciar */
+        private void Consulta_Mercancia_Load(object sender, EventArgs e) /* muestra registro de mercancia al iniciar */
         {
             using (var context = new ApplicationDbContext())
             {
@@ -30,7 +31,7 @@ namespace Proyecto_Bar_La_Iglesia
         }//fin metodo
         //*******
         private void btn_Agregar_Mercancia_Click(object sender, EventArgs e) /* boton ingresar agregar mercancia */
-        {        
+        {
             AgregarMercancia.Show();
         }//fin metodo
         //*******
@@ -39,14 +40,9 @@ namespace Proyecto_Bar_La_Iglesia
             AgregarExistencia.Show();
         }//fin metodo
         //*******
-        private void btn_Limpiar_Click(object sender, EventArgs e) /*  */
-        {
-            txt_Codigo.Clear();
-            txt_Nombre.Clear();
-        }//fin metodo
-        //*******
         private void dgv_Mercancia_CellContentClick(object sender, DataGridViewCellEventArgs e) /* boton inresar actualizar mercancia */
         {
+            id = Convert.ToInt32(dgv_Mercancia.CurrentRow.Cells[0].Value.ToString());
             /*hacer codigo para que envie codigo del producto al form agregar mercancia*/
             AgregarMercancia.Show();
         }//fin metodo

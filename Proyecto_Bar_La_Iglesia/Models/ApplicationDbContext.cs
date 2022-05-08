@@ -11,14 +11,13 @@ namespace Proyecto_Bar_La_Iglesia.Modelos
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
-            optionBuilder.UseNpgsql("Host=localhost; Database=; Username=postgres; password=;").EnableSensitiveDataLogging(true);
+            optionBuilder.UseNpgsql("Host=localhost; Database=BarLaIglesia; Username=postgres; password=Roman55;").EnableSensitiveDataLogging(true);
         }
         //*******
-
         public DbSet<Personal> Personal { get; set; }
         public DbSet<Mercancia> Mercancia { get; set; }
         public DbSet<HistorialVenta> HistorialVenta { get; set; }
         //*******
 
     }//fin class
-}//fin proyecto
+}//fin DbContext

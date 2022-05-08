@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_Bar_La_Iglesia.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,25 @@ namespace Proyecto_Bar_La_Iglesia
             Cajero Cajero = new Cajero();
             Cajero.Show();
         }//fin metodo
+        //*******
+        private void bt_Inicio_Click(object sender, EventArgs e) /* boton para ingresar con cuenta de usuario */
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                var usuario = context.Personal.First(x => x.Usuario == txt_Usuario.Text);
+                if (usuario != null)
+                {
+                    if (usuario.Contraseña == txt_Contraseña.Text)//--si la contraseña es correcta
+                    {
+                        mn_Menu.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("EL USUARIO Y/O CONTRASEÑA ES INCORRECTA", "AVISO", MessageBoxButtons.OK);
+                    }
+                }
+            }
+        }
         //*******
 
     }//fin class

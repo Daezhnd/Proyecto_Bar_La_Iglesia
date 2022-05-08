@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Modelos\Mercancia.cs\**" />
-    <EmbeddedResource Remove="Modelos\Mercancia.cs\**" />
-    <None Remove="Modelos\Mercancia.cs\**" />
+    <Compile Remove="Models\Mercancia.cs\**" />
+    <EmbeddedResource Remove="Models\Mercancia.cs\**" />
+    <None Remove="Models\Mercancia.cs\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <Folder Include="Basura\" />
+    <Folder Include="Migration\" />
   </ItemGroup>
 
 </Project>

@@ -8,7 +8,7 @@ namespace Proyecto_Bar_La_Iglesia.Modelos
 {
     class Personal
     {
-        public int Codigo { get; set; }
+        public int Id { get; set; }
         public String Nombre { get; set; }
         public String Apellido { get; set; }
         public String Sexo { get; set; }

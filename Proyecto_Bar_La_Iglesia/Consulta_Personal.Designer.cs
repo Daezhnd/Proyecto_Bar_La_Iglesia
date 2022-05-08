@@ -105,6 +105,7 @@ namespace Proyecto_Bar_La_Iglesia
             this.dgv_Personal.RowTemplate.Height = 25;
             this.dgv_Personal.Size = new System.Drawing.Size(501, 420);
             this.dgv_Personal.TabIndex = 0;
+            this.dgv_Personal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Personal_CellContentClick);
             // 
             // panel3
             // 
@@ -134,6 +135,7 @@ namespace Proyecto_Bar_La_Iglesia
             this.Controls.Add(this.panel1);
             this.Name = "Consulta_Personal";
             this.Text = "Consulta Personal";
+            this.Load += new System.EventHandler(this.Consulta_Personal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

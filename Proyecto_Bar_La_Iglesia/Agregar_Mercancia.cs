@@ -13,7 +13,7 @@ namespace Proyecto_Bar_La_Iglesia
 {
     public partial class Agregar_Mercancia : Form
     {
-        int codigo;//--obtiene valor codigo personal
+        int id;//--obtiene valor codigo mercancia
         public Agregar_Mercancia()
         {
             InitializeComponent();
@@ -61,7 +61,7 @@ namespace Proyecto_Bar_La_Iglesia
             {
                 if (txt_Codigo.Text != " " && txt_Nombre.Text != " " && txt_Proveedor.Text != " " && txt_Existencia.Text != " " && txt_Precio.Text != " ")//--if para que no queden casillas sin llenar
                 {
-                    var actualizar = context.Mercancia.First(x => x.Codigo == codigo);
+                    var actualizar = context.Mercancia.First(x => x.Id == id);
                     if (actualizar != null)
                     {
                         actualizar.Nombre = txt_Nombre.Text.ToUpper();

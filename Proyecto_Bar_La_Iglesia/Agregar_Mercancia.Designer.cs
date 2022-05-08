@@ -29,9 +29,9 @@ namespace Proyecto_Bar_La_Iglesia
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.pn_Actualizar = new System.Windows.Forms.Panel();
             this.btn_Actualizar = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.pn_Agregar = new System.Windows.Forms.Panel();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -58,8 +58,8 @@ namespace Proyecto_Bar_La_Iglesia
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Codigo = new System.Windows.Forms.TextBox();
-            this.panel13.SuspendLayout();
-            this.panel12.SuspendLayout();
+            this.pn_Actualizar.SuspendLayout();
+            this.pn_Agregar.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -69,13 +69,13 @@ namespace Proyecto_Bar_La_Iglesia
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel13
+            // pn_Actualizar
             // 
-            this.panel13.Controls.Add(this.btn_Actualizar);
-            this.panel13.Location = new System.Drawing.Point(276, 368);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(70, 70);
-            this.panel13.TabIndex = 17;
+            this.pn_Actualizar.Controls.Add(this.btn_Actualizar);
+            this.pn_Actualizar.Location = new System.Drawing.Point(276, 368);
+            this.pn_Actualizar.Name = "pn_Actualizar";
+            this.pn_Actualizar.Size = new System.Drawing.Size(70, 70);
+            this.pn_Actualizar.TabIndex = 17;
             // 
             // btn_Actualizar
             // 
@@ -87,13 +87,13 @@ namespace Proyecto_Bar_La_Iglesia
             this.btn_Actualizar.UseVisualStyleBackColor = true;
             this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
             // 
-            // panel12
+            // pn_Agregar
             // 
-            this.panel12.Controls.Add(this.btn_Agregar);
-            this.panel12.Location = new System.Drawing.Point(12, 368);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(70, 70);
-            this.panel12.TabIndex = 16;
+            this.pn_Agregar.Controls.Add(this.btn_Agregar);
+            this.pn_Agregar.Location = new System.Drawing.Point(12, 368);
+            this.pn_Agregar.Name = "pn_Agregar";
+            this.pn_Agregar.Size = new System.Drawing.Size(70, 70);
+            this.pn_Agregar.TabIndex = 16;
             // 
             // btn_Agregar
             // 
@@ -323,8 +323,8 @@ namespace Proyecto_Bar_La_Iglesia
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(358, 450);
-            this.Controls.Add(this.panel13);
-            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.pn_Actualizar);
+            this.Controls.Add(this.pn_Agregar);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
@@ -338,8 +338,8 @@ namespace Proyecto_Bar_La_Iglesia
             this.Controls.Add(this.panel1);
             this.Name = "Agregar_Mercancia";
             this.Text = "Agregar Mercancia";
-            this.panel13.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
+            this.pn_Actualizar.ResumeLayout(false);
+            this.pn_Agregar.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -360,9 +360,9 @@ namespace Proyecto_Bar_La_Iglesia
 
         #endregion
 
-        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel pn_Actualizar;
         private System.Windows.Forms.Button btn_Actualizar;
-        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel pn_Agregar;
         private System.Windows.Forms.Button btn_Agregar;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
